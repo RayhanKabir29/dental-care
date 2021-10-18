@@ -1,11 +1,22 @@
 import React from 'react';
+import { Card,Button} from 'react-bootstrap';
 import './Service.css';
 
 const Service = (props) => {
+    const{name, img,desc} = props.service;
     return (
-        <div>
-            <h2>This is Service</h2>
-        </div>
+        <>
+            <Card>
+                <Card.Img variant="top" src={img} className="img-fluid"/>
+                <Card.Body>
+                    <Card.Title>{name}</Card.Title>
+                    <Card.Text>
+                        {desc}
+                    </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+            </Card>
+        </>
     );
 };
 

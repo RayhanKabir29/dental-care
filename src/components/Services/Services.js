@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import Service from '../Service/Service';
 import './Services.css';
 
@@ -6,13 +7,25 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(()=>{
-        fetch('./services.json')
+        fetch("services.json")
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setServices(data))
     },[])
     return (
-        <div className="services-container">
-            
+        <div className="service-container mt-5">
+           <Container>
+           <Row>
+            <div className="single-service">
+            {
+                services.map(service=> <Service
+                 key ={service.service_id}
+                 service ={service}
+                >
+                </Service>)
+            }
+            </div>
+           </Row>
+           </Container>
         </div>
     );
 };
