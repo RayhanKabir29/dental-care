@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/Pages/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-     <p className="underline ...">The quick brown fox ...</p>
+    <div>
+      <Home></Home>
     </div>
   );
 }

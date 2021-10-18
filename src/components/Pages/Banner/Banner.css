@@ -1,0 +1,54 @@
+.banner-section {
+  background-color: #f1f7f8;
+}
+.banner-text {
+  margin-top: 220px;
+  padding: 0 60px;
+}
+.banner-text h5 {
+  margin-bottom: 20px;
+  width: 260px;
+  padding: 4px 8px;
+  border: 1px solid #1dbfcc;
+  border-radius: 26px;
+  background: #fff;
+}
+.banner-text h1 {
+  font-size: 60px;
+}
+.bold {
+  font-weight: 700;
+}
+.btn-appoinment {
+  background-color: #1dbfcc !important;
+  border: none !important;
+  padding: 15px 25px !important;
+}
+.btn-appoinment:hover {
+  background-color: #06a3da !important;
+}
+.btn-consult {
+  background-color: transparent !important;
+  border: 2px solid skyblue !important;
+  color: #1dbfcc !important;
+  padding: 15px 25px !important;
+}
+.btn-consult:hover {
+  color: #fff !important;
+  background-color: #06a3da !important;
+}
+
+/* responsive  */
+@media screen and (max-width: 360px) {
+  .banner-text {
+    margin-top: 20px;
+    padding: 40px;
+  }
+  .banner-text h1 {
+    font-size: 24px;
+  }
+  .btn-appoinment,
+  .btn-consult {
+    margin-bottom: 15px;
+  }
+}
