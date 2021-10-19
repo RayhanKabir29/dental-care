@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Service from '../Service/Service';
+
 import './Services.css';
 
 const Services = () => {
@@ -12,10 +13,10 @@ const Services = () => {
         .then(data => setServices(data))
     },[])
     return (
-        <div className="service-container mt-5">
+        <div id="services" className="service-container mt-5">
            <Container>
            <Row>
-            <div className="single-service">
+            <Col className="single-service">
             {
                 services.map(service=> <Service
                  key ={service.service_id}
@@ -23,7 +24,7 @@ const Services = () => {
                 >
                 </Service>)
             }
-            </div>
+            </Col>
            </Row>
            </Container>
         </div>

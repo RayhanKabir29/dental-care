@@ -1,9 +1,10 @@
 import React from 'react';
 import { Card,Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Service.css';
 
 const Service = (props) => {
-    const{name, img,desc} = props.service;
+    const{service_id,name, img,desc} = props.service;
     return (
         <>
             <Card>
@@ -13,7 +14,9 @@ const Service = (props) => {
                     <Card.Text>
                         {desc}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Link to = {`/appointment/${service_id}`}>
+                    <Button variant="primary">Book Appoint For {name}</Button>
+                    </Link>
                 </Card.Body>
             </Card>
         </>
