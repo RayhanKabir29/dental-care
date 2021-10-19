@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.about-container row {
+  padding: 0;
+}
+.about-text {
+  color: azure;
+  background: #1dbfcc;
+  padding: 20px 120px;
+  text-align: left;
+}
+
+.about-service {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+#about-us .card {
+  color: #0b2c4d;
+  background-color: transparent !important;
+  border: none !important;
+}
+@media screen and (max-width: 360px) {
+  .about-text {
+    color: azure;
+    background: #1dbfcc;
+    padding: 20px 20px;
+    text-align: left;
+  }
+  .about-service {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 8px;
+  }
+}

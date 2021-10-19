@@ -3,6 +3,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 }
+.text-bold {
+  font-weight: 700;
+}
 @media screen and (max-width: 360px) {
   .single-service {
     display: grid;

@@ -10,12 +10,13 @@ import ServiceAppoinment from './components/ServiceAppoinment/ServiceAppoinment'
 import Login from './components/Login/Login';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import Footer from './components/Footer/Footer';
 
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
      <AuthProvider>
      <BrowserRouter>
       <Header></Header>
@@ -42,6 +43,7 @@ function App() {
             <NotFound></NotFound>
           </Route>
         </Switch>
+        <Footer></Footer>
       </BrowserRouter>
      </AuthProvider>
     </div>
