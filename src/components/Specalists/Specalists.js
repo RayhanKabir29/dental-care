@@ -8,7 +8,7 @@ const Specalists = () => {
             <Container>
 
                 <Row>
-                    <h2 className="text-center m-5">Our Specialists</h2>
+                    <h2 className="text-center specialist-heading">Our Specialists</h2>
                 </Row>
                 <Row>
                     <div className="doctor-list pb-5">
