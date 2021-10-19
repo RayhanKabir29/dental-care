@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { useHistory, useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import useAuth from '../../hooks/useAuth';
+import './Login.css';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -10,6 +11,7 @@ const Login = () => {
     const [isLogin, setisLogin] = useState(false);
     const location = useLocation();
     const histoiry = useHistory();
+    
     const redirect_uri = location.state?.form || '/';
     const {signInWithGoogle} = useAuth();
     const auth = getAuth();
@@ -60,14 +62,17 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then(result =>{
           const user = result.user;
-          console.log(user);
+          if(user?.accessToken){
+            localStorage.setItem('accessToken',user?.accessToken);
+            histoiry.push(redirect_uri)
+          }
         })
         .catch(error =>{
           setError(error.code)
         })
       }
     return (
-        <div>
+        <div className="login-container">
             <form onSubmit={handleRegister} className="m-5">
             <h3 className="text-primary mb-3 text-center">Please {isLogin? 'Login' :'Register Here'}</h3>
           <div className="row mb-3">
@@ -97,7 +102,9 @@ const Login = () => {
         </form>
 
             <div>=======or==========</div>
+            <div className="google-login mb-3">
             <Button onClick={handleGoogleLogin} variant="success">Login With Google</Button>
+            </div>
         </div>
     );
 };

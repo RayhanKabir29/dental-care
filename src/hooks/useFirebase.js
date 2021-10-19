@@ -20,11 +20,14 @@ const useFirebase =() =>{
         ;
     }
    useEffect(()=>{
+       console.log('auth',auth)
        const unsubscribed = onAuthStateChanged(auth, user=>{
            if(user){
+               console.log('form firebase',user)
                setUser(user)
            }
            else{
+               console.log('didnt get')
                setUser({})
            }
            setIsLoading(false)

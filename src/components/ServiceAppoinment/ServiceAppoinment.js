@@ -1,7 +1,7 @@
-import React from 'react';
 import { useParams } from 'react-router';
-
 const ServiceAppoinment = () => {
+    
+
     const {apointmentID} = useParams();
     return (
         <div>
