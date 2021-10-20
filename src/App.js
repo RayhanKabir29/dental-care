@@ -37,7 +37,7 @@ function App() {
          <Login></Login>
          </Route>
           <PrivateRoute path="/appointment/:apointmentID">
-              <ServiceAppoinment></ServiceAppoinment>
+              <ServiceAppoinment/>
           </PrivateRoute>
           <Route path ="*">
             <NotFound></NotFound>

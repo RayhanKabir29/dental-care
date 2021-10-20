@@ -20,11 +20,11 @@ const Footer = () => {
                    <div className="footer-service text-white">
                    <h2>Our Services</h2>
                     <ul>
-                        <li><Link>Cosmetic Dentistry</Link></li>
-                        <li><Link>General Dentistry</Link></li>
-                        <li><Link>Certified Dentist</Link></li>
-                        <li><Link>New Technology</Link></li>
-                        <li><Link>Accept Insurance</Link></li>
+                        <li><Link to ="/service">Cosmetic Dentistry</Link></li>
+                        <li><Link to ="/service">General Dentistry</Link></li>
+                        <li><Link to ="/service">Certified Dentist</Link></li>
+                        <li><Link to ="/service">New Technology</Link></li>
+                        <li><Link to ="/service">Accept Insurance</Link></li>
                     </ul>
                    </div>
                 </Col>

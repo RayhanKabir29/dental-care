@@ -1,0 +1,21 @@
+.single-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.service-info {
+  padding: 75px;
+  color: #333;
+}
+@media screen and (max-width: 360px) {
+  .single-services {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .service-img {
+    width: 100%;
+  }
+  .service-info {
+    padding: 15px;
+    color: #333;
+  }
+}

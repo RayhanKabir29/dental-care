@@ -2,16 +2,16 @@ import React from 'react';
 import { Container, Nav, Navbar,Button } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
+import './Header.css';
 
 const Header = () => {
 
     const {user, logOut} = useAuth();
-    console.log('user form header',user)
     return (
         <>
-            <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
+            <Navbar  variant="dark" sticky="top" collapseOnSelect expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">Dental Care</Navbar.Brand>
+                    <Navbar.Brand as ={HashLink} to="/home#home"><span style ={{color: 'black'}}>Dental Care</span></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                     <Nav.Link as ={HashLink} to="/home#home">Home</Nav.Link>
@@ -22,7 +22,9 @@ const Header = () => {
                     { user?.email?<Button onClick={logOut} variant="danger">Log Out</Button>:
                     <Nav.Link as ={HashLink} to="/login">Login</Nav.Link>   }
                    <Navbar.Text>
+                        <div className="sign-in-msg text-primary">
                         Signed in as: {user?.email}
+                        </div>
                     </Navbar.Text>
                     </Navbar.Collapse> 
                 </Container>
